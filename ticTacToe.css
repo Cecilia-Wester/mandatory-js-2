@@ -12,9 +12,9 @@ body, html{
 
 header{
     background-image: url(https://cdn.pixabay.com/photo/2016/12/15/07/54/sunset-1908282_1280.jpg);
-    object-fit: cover;
+    background-size: cover;
     background-repeat: no-repeat;
-    object-position: center;
+    background-position: bottom;
     font-size: 2rem;
     margin: auto;
     width: 80%;
@@ -41,12 +41,9 @@ main{
 
 #gameboard{
     height: 320px;
-    width: 320px;
-    border-collapse: collapse;
-    border: 6px solid black;
+    width: 320px;    
     display: flex;
     flex-wrap: wrap;
-    margin: auto;
     align-items: center;
     justify-content: center;
     margin: 10px;
@@ -54,8 +51,8 @@ main{
 
 .gamesquare {
     height: 33%;
-    width: 32.7%;
-    border: 1px solid black;
+    width: 32%;
+    border: 2px solid black;
     cursor: pointer;
     font-size: 50px;
     display: flex;
@@ -66,9 +63,7 @@ main{
 
 .gamesquare:hover{
     background-color: lightgrey;
-    
 }
-
 
 .endGame{
     display: none;
@@ -78,19 +73,25 @@ main{
     position:absolute;
     z-index: 10;
     text-align: center;
+    font-size: 20px;
 }
 
-.reset{
+.resetBtn{
     background-color: peachpuff;
     height: 30px;
-    width: 336px;
+    width: 320px;
     border: peachpuff;
     outline: peachpuff;
+    margin-top: 30px;
 }
 
-.buttonOk{
-    font-size: 30px;
-    
+.resetBtn:hover{
+    background: rgb(250, 192, 142);
+    cursor: pointer;
+}
+
+.buttonClose{
+    font-size: 20px;
 }
 
 

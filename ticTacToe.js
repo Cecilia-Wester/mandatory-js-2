@@ -44,19 +44,17 @@ function takeTurn(){
 }
 
 
-const winnerCombos = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6],
-];
-
-
 function determenWinner(type){
+    const winnerCombos = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6],
+    ];
     for(let i = 0; i < winnerCombos.length; i++){
         let winner = true;
         for (let j = 0; j < winnerCombos[i].length; j++){
@@ -74,7 +72,7 @@ function determenWinner(type){
 }
 
 
-let resetbutton = document.querySelector('.reset');
+let resetbutton = document.querySelector('.resetBtn');
 resetbutton.addEventListener('click', function(e){
     for (let gamesquare of gamesquares){
         gamesquare.innerHTML = '';
@@ -86,15 +84,11 @@ resetbutton.addEventListener('click', function(e){
 
 function endGame(text){
     let endGameDiv = document.querySelector('.endGame')
-    let textX = document.querySelector('.endGame p');
+    let textEndGame = document.querySelector('.endGame p');
     endGameDiv.style.display = 'block';
-    textX.textContent = text;
-    let buttonOk = document.querySelector('.buttonOk');
-    buttonOk.addEventListener('click', function(e){
+    textEndGame.textContent = text;
+    let buttonClose = document.querySelector('.buttonClose');
+    buttonClose.addEventListener('click', function(e){
         endGameDiv.style.display = 'none';
     });
-
 }
-
-
-
